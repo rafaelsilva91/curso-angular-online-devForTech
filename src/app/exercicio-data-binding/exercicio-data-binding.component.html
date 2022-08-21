@@ -38,8 +38,8 @@
 <img [src]="getImageURL()">
 <br><br><br><br><br><br>
 
-<hr><br><br><br>
+<hr><br><br><br> Valor Atual de valorContador: {{valorContador}}
 
-<app-exercicio-contador [valor]="10" (valorMudou)="onValorAtualizadoNoContatdor($event)"></app-exercicio-contador>
+<app-exercicio-contador [(valor)]="valorContador"></app-exercicio-contador>
 
 <hr><br><br><br>
