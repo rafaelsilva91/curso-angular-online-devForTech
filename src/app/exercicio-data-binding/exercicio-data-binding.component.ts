@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-exercicio-data-binding',
@@ -9,6 +9,8 @@ export class ExercicioDataBindingComponent implements OnInit {
 
   @Input() palavra: string;
   @Input() color: string;
+  @Output() clicado = new EventEmitter();
+
 
   imageURL = 'https://www.infomoney.com.br/wp-content/uploads/2022/05/carros-de-luxo-e1653484670585.jpg?quality=70'
   initialValue = 'Informe aqui o valor inicial'
@@ -41,6 +43,15 @@ export class ExercicioDataBindingComponent implements OnInit {
 
   passouMouse(){
     console.log('Mouse passou no botão...')
+  }
+
+  onClickBotaoEmissor($event){
+    console.log('Emitir informação para o componente pai.')
+    this.clicado.emit($event);
+  }
+
+  onValorAtualizadoNoContatdor(newValue){
+    console.log('OnValorAtualizadoNoContador', 'Novo Valor: '+newValue );
   }
 
 }

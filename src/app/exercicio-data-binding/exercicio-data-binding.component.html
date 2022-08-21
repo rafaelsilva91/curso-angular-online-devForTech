@@ -26,5 +26,20 @@
 <input type="text" [value]="valorDoInput" (keyup)="digitouAlgo($event)" (mouseenter)="passouMouse()">
 <br><br> Valor: {{valorDoInput}}
 <hr>
-<img [src]="getImageURL()">
+
+<h2>Exemplos Event Binding2</h2>
+
+<button (click)="onClickBotaoEmissor($event)">Emitir informação de Clique</button>
+
+
 <br><br>
+
+<hr>
+<img [src]="getImageURL()">
+<br><br><br><br><br><br>
+
+<hr><br><br><br>
+
+<app-exercicio-contador [valor]="10" (valorMudou)="onValorAtualizadoNoContatdor($event)"></app-exercicio-contador>
+
+<hr><br><br><br>
