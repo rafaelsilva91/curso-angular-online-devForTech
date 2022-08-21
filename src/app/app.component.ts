@@ -7,8 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  palavras = 'CARRO';
+  favoriteColor = 'Verde';
+  titleHeader = 'Titulo dinamico';
+
   constructor (){}
 
- 
 
 }

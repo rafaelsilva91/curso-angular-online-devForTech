@@ -1,0 +1,20 @@
+<hr>
+<p>exercicio-data-binding works!</p>
+<br><br>
+<h2>Palavra : {{palavra}} - Cor: {{color}}</h2>
+<br><br>
+
+
+<input type="text" [value]="initialValue">
+<br><br>
+
+<button [disabled]="isDisabled">Cliquei aqui</button>
+<br><br>
+
+<p [attr.aria-label]=" isDisabled ? 'Texto desabilitado':accessibilitiTest">
+    Um texto Qualquer...
+</p>
+
+<br><br>
+
+<img [src]="getImageURL()">
