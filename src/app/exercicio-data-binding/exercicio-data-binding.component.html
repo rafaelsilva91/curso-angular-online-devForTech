@@ -16,5 +16,15 @@
 </p>
 
 <br><br>
+<hr>
+<h2>Exemplos Event Binding</h2>
 
+<button (click)="onClick($event)">Clique aqui</button>
+
+<br><br>
+
+<input type="text" [value]="valorDoInput" (keyup)="digitouAlgo($event)" (mouseenter)="passouMouse()">
+<br><br> Valor: {{valorDoInput}}
+<hr>
 <img [src]="getImageURL()">
+<br><br>

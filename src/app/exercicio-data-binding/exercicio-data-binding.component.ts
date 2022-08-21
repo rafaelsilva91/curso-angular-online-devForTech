@@ -14,7 +14,8 @@ export class ExercicioDataBindingComponent implements OnInit {
   initialValue = 'Informe aqui o valor inicial'
   isDisabled = true
   accessibilitiTest = 'Um outro texto qualquer a ser lido pelo leitor de tela';
-  
+  valorDoInput = '';
+
   constructor() {
     setTimeout(() => {
       this.isDisabled = false
@@ -29,6 +30,17 @@ export class ExercicioDataBindingComponent implements OnInit {
     return this.imageURL;
   }
 
- 
+  onClick($event){
+    console.log('clicou!',$event);
+  }
+
+  digitouAlgo($event){
+    this.valorDoInput = $event.target.value;
+    console.log('Informação digitada...', $event);
+  }
+
+  passouMouse(){
+    console.log('Mouse passou no botão...')
+  }
 
 }
