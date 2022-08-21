@@ -1,0 +1,56 @@
+Valor atual dentro de deveExibir: {{deveExibir}}
+<br>
+<button (click)="trocarValor()">Trocar Valor</button>
+
+<div *ngIf="deveExibir">
+    <p>exercicio-diretivas works! OLA</p>
+</div>
+
+<br><br><br>
+<div *ngIf="soma(5,6) > 10">
+    <p>baseado na soma</p>
+</div>
+
+<br><br><br>
+<ng-template [ngIf]="deveExibir">
+    <div>
+        Content to render when condition is true.
+    </div>
+</ng-template>
+
+<br><br><br>
+<div *ngIf="deveExibir; else elseblock">
+    Content to render when condition is true.
+</div>
+
+
+<br><br><br>
+<ng-template #elseblock>
+    <div>
+        BlocoSenao
+    </div>
+</ng-template>
+
+
+
+<br><br><br>
+<br><br><br>
+
+
+<h1>---------ngFor ------------------</h1>
+<br>
+<ul>
+    <li *ngFor="let fruta of listaFrutas">{{fruta}}</li>
+</ul>
+
+<p *ngFor="let fruta of listaFrutas">&nbsp;{{fruta}}</p>
+
+<ul> CARROS
+    <br><br>
+    <li *ngFor="let carro of carrosLista; index as i"> {{i + 1}} Placa: {{carro.placa}} &nbsp;&nbsp; Cor:{{carro.cor}} </li>
+</ul>
+
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
