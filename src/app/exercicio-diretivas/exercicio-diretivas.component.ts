@@ -1,3 +1,4 @@
+import { MEMES_AGRUPADOS_POR_CATEGORIA } from './exercicio-diretivas.constants';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExercicioDiretivasComponent implements OnInit {
 
-  deveExibir = false;
+  constructor() { }
+
+  ngOnInit(): void {
+  }
 
   listaFrutas=[
     'maçã', 
@@ -39,11 +43,10 @@ export class ExercicioDiretivasComponent implements OnInit {
     },
   ]
 
+  deveExibir = false;
+  MEMES_AGRUPADOS_POR_CATEGORIA = MEMES_AGRUPADOS_POR_CATEGORIA;
+  PREFIXO_IMAGEM_URL = 'https://raw.githubusercontent.com/vitorfgsantos/angular-memes-diretivas/master/images';
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
   trocarValor(){
     this.deveExibir = !this.deveExibir ;

@@ -54,3 +54,31 @@ Valor atual dentro de deveExibir: {{deveExibir}}
 <br><br><br>
 <br><br><br>
 <br><br><br>
+<hr>
+<h2>Resolução do exercicio-diretivas</h2>
+<!--<br><br><br> {{MEMES_AGRUPADOS_POR_CATEGORIA}}-->
+<br><br>
+<ul>
+    <li *ngFor="let memesAgrupados of MEMES_AGRUPADOS_POR_CATEGORIA">
+        <h2>{{memesAgrupados.categoria}}</h2>
+
+        <div *ngFor="let meme of memesAgrupados.memes; let par = even">
+            <!--<img [src]="PREFIXO_IMAGEM_URL+meme.imagemURL" [alt]="meme.titulo">-->
+            <!--{{par}} -->
+            <br>
+            <img [src]="meme.imagemURL" [alt]="meme.titulo" *ngIf="par else blocoPar">
+            <ng-template #blocoPar>
+                <h2>PAR</h2>
+            </ng-template>
+            <!--<h2 *ngIf="par">PAR</h2>-->
+
+        </div>
+
+    </li>
+
+</ul>
+
+
+<br><br><br>
+<br><br><br>
+<br><br><br>
